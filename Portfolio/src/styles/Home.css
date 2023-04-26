@@ -1,0 +1,26 @@
+body{
+    background-color:#0b0b0b !important;
+}
+.home-conteiner-image-text{
+    display: flex;
+    justify-content: center;
+    margin-top: 7%;
+}
+
+.home-image{
+    border-radius: 50% 20% / 10% 40%;
+}
+.conteiner-text{
+    width: 50%;
+    padding: 2%;
+    padding-left: 5%;
+}
+.home-text-h1{
+    color: white;
+    -webkit-text-stroke: 1.2px
+}
+.home-text-p{
+    color: white;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
