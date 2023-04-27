@@ -19,9 +19,6 @@ import { useState } from "react";
 
 function ScrollTop(props) {
   const { children, window } = props;
-  // Note that you normally won't need to set the window ref as useScrollTrigger
-  // will default to window.
-  // This is only being set here because the demo is in an iframe.
   const trigger = useScrollTrigger({
     target: window ? window() : undefined,
     disableHysteresis: true,
@@ -66,7 +63,7 @@ export default function BackToTop(props) {
   return (
     <React.Fragment>
       <CssBaseline />
-      <AppBar sx={{ backgroundColor: "black", height: "100px"}}>
+      <AppBar sx={{ backgroundColor: "#0b0b0b", height: "100px"}}>
         <Toolbar sx={{ display: "flex", height: "100%", width: "100%"}}>
           <Typography sx={{width:"50%", paddingRight:"40px"}} component="div" >
             <Typography
@@ -84,7 +81,7 @@ export default function BackToTop(props) {
             <a  className="tabs" href="/">HOME</a>
             <a className="tabs" href="">ABOUT</a>
             <a className="tabs" href="">WORK</a>
-            <a className="tabs" href="">CONTACT</a>
+            <a className="tabs" href="/contact">CONTACT</a>
           </div>
         </Toolbar>
       </AppBar>
