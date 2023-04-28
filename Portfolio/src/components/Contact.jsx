@@ -188,7 +188,7 @@ export default function Contact() {
           </a>
           <a
             className="button-contact"
-            href="https://github.com/cristian-23"
+            href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#sent?compose=GTvVlcSBnNXKnSmzPsrdgmMTgHqNSJBtbkTMKlTbKMMRvgSxqPfNMzbhTTtNlDmwcjfPbNqKPRQzr"
             target="_blank"
           >
             <FaGoogle className="icons-contact" />
