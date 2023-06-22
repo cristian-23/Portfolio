@@ -8,10 +8,22 @@
   height: 2%;
   margin-left: 1%;
 }
+.conteiner-tabs{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+@media(min-width:768px){
+  .conteiner-tabs{
+    flex-direction: row;
+    gap: 4rem;
+  }
+}
 .tabs{
     display: inline-block;
     position: relative;
-    margin-left: 10%;
     color: white;
     font-size: 15px;
     cursor: pointer;
@@ -39,4 +51,9 @@
 .tabs:hover::after{
     transform: scaleX(1);
     transform-origin: bottom left;
+}
+@media (max-width:700px){
+  .toolbar{
+    display: initial !important;
+  }
 }
