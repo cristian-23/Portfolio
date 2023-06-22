@@ -4,16 +4,18 @@ import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 import FormHelperText from "@mui/material/FormHelperText";
 import { styled } from "@mui/material/styles";
-import "../styles/Contact.css";
-import { FaFacebookF } from "react-icons/fa";
-import { FaLinkedinIn } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa";
-import { FaTwitter } from "react-icons/fa";
-import { FaGoogle } from "react-icons/fa";
-import emailjs from "@emailjs/browser";
+import {
+  FaFacebookF,
+  FaLinkedinIn,
+  FaGithub,
+  FaTwitter,
+  FaGoogle,
+} from "react-icons/fa";
 import { ToastContainer, toast } from "react-toastify";
+import emailjs from "@emailjs/browser";
+import "../styles/Contact.css";
 
-export default function Contact() {
+export default function Contact({ setIsLoading }) {
   const CssTextField = styled(TextField)({
     "& label.Mui-focused": {
       color: "white",
@@ -47,6 +49,7 @@ export default function Contact() {
         position: toast.POSITION.TOP_RIGHT,
       });
     } else {
+      setIsLoading(true);
       emailjs
         .sendForm(
           "service_iz93nyp",
@@ -58,6 +61,7 @@ export default function Contact() {
           toast.success("Query Sent !", {
             position: toast.POSITION.TOP_RIGHT,
           });
+          setIsLoading(false);
           e.target.reset();
         });
     }
@@ -159,7 +163,7 @@ export default function Contact() {
             marginLeft: "30px",
           }}
         >
-          <p style={{ color: "white", fontSize:"15px"}}>
+          <p style={{ color: "white", fontSize: "15px" }}>
             Get connected with me on social networks:
           </p>
         </div>
