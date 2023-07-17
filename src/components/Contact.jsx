@@ -72,10 +72,11 @@ export default function Contact({ setIsLoading }) {
       <Box
         onSubmit={sendEmail}
         component="form"
+        className="container-contact"
         sx={{
           margin: "0 auto",
           marginTop: "15px",
-          width: "40%",
+          width: {md:"40%", sx:"100%"},
         }}
         noValidate
         autoComplete="off"
@@ -156,25 +157,14 @@ export default function Contact({ setIsLoading }) {
         }}
       >
         <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            width: "50%",
-            marginLeft: "30px",
-          }}
+        className="text-footer"
         >
           <p style={{ color: "white", fontSize: "15px" }}>
             Get connected with me on social networks:
           </p>
         </div>
         <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "flex-end",
-            width: "50%",
-            marginRight: "30px",
-          }}
+        className="buttons-container"
         >
           <a
             className="button-contact"
