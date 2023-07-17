@@ -2,27 +2,58 @@ html,
 body {
   height: 100%;
 }
-#root{
-    height: 100%;
+.container-contact {
+  margin: 0 auto;
+  margin-top: 15px;
+  width: 40%;
 }
-.buttons-conteiner{
-    display: flex;
+@media (max-width: 700px) {
+  .container-contact {
+    width: 100%;
+    margin-top: 60px !important;
+  }
+}
+#root {
+  height: 100%;
+}
+.text-footer {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  margin-left: 30px;
+}
+@media( max-width:700px){
+  .text-footer {
+    display: none;
+  }
+}
+.buttons-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 50%;
+  margin-right: 30px;
+}
+@media( max-width:700px){
+  .buttons-container {
+    width: 100%;
     justify-content: center;
-    padding: 0.4%;
-
+    margin-right: 0px;
+    gap: 1rem;
+  }
 }
-.button-contact{
-   width: 40px;
-   height: 40px;
-   margin-right: 2%;
-   cursor: pointer;
-   color: white;
-   background-color: transparent;
-   display: flex;
+.button-contact {
+  width: 40px;
+  height: 40px;
+  margin-right: 2%;
+  cursor: pointer;
+  color: white;
+  background-color: transparent;
+  display: flex;
   justify-content: center;
-   align-items: center;
+  align-items: center;
 }
-.icons-contact{
+.icons-contact {
   width: 25px;
   height: 25px;
 }
