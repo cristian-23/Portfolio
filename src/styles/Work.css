@@ -1,10 +1,36 @@
-.iten-work{
-   display:flex;
-   background-color: black !important;
-   
-}
-.conteine-card-work{
+.conteiner-card-work{
    width: 85%;
+}
+@media(max-width:700px){
+   .conteiner-card-work{
+      width: 100% !important;
+      margin-top: 5rem !important;
+   }
+   .css-1tbev19-MuiGrid2-root {
+      padding: 0 !important;
+   }
+}
+.iten-work{
+   background-color: black !important;
+}
+@media(min-width:700px){
+   .iten-work{
+      display:flex;
+      background-color: black !important;
+   }
+}
+.conteiner-links-works{
+   display: flex;
+   justify-content: center;
+}
+.text-card-work{
+   padding: 0px 20px;
+   color: white;
+}
+@media(max-width:700px){
+   .text-card-work{
+      padding: 0px ;
+   }
 }
 .enlace-work{
    text-decoration: none;
@@ -14,6 +40,11 @@
    font-weight: 900;
    margin-right: 20px;
 }
+@media(max-width:700px){
+   .enlace-work{
+      padding: .4rem 3rem;
+   }
+}
 .enlace-github-work{
    background-color: green;
    text-decoration: none;
@@ -21,11 +52,8 @@
    padding: .3rem 1rem;
    font-weight: 900;
 }
-.conteiner-links-works{
-   display: flex;
-   justify-content: center;
-}
-.text-card-work{
-   padding: 0px 20px;
-   color: white;
+@media(max-width:700px){
+   .enlace-github-work{
+      padding: .4rem 2rem;
+   }
 }

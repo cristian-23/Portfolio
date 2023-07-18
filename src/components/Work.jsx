@@ -20,13 +20,13 @@ const Item = styled(Paper)(({ theme }) => ({
 export default function RowAndColumnSpacing() {
   return (
     <Box sx={{ width: '100%', display:"flex",justifyContent:"center", marginTop:"5%", marginBottom:"5%"}}>
-      <Grid  className= "conteine-card-work" container  columnSpacing={{ sm: 10, md:4}}>
-        <Grid sx={{padding:"1rem 5rem"}} xs={12}>
+      <Grid  className= "conteiner-card-work" container  columnSpacing={{ xs: 12, md:4}}>
+        <Grid sx={{padding:{md:"1rem 5rem", sx:"0rem"}}} xs={12}>
           <Item className='iten-work'>
             <div >
               <img style={{padding:"5px"}} src={citasVeterinaria} alt="" width="100%" height="100%"/>
             </div>
-            <div style={{padding:"10px"}}>
+            <div>
               <h1 style={{color:"white"}}>Citas Veterinaria</h1>
             <p className='text-card-work'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis obcaecati qui corporis aliquid recusandae laudantium ipsum, sunt officiis cumque, temporibus nesciunt. Hic, doloremque odio omnis similique nemo sed a repellat?</p>
             <div className="conteiner-links-works">
@@ -37,12 +37,12 @@ export default function RowAndColumnSpacing() {
             </div>         
           </Item>
         </Grid>
-        <Grid sx={{padding:"1rem 5rem"}} xs={12}>
+        <Grid sx={{padding:{md:"1rem 5rem", sx:"0rem"}}} xs={12}>
         <Item className='iten-work'>
             <div>
               <img style={{padding:"5px"}} src={controlDeGastos} alt="" width="100%" height="100%"/>
             </div>
-            <div style={{padding:"10px"}}>
+            <div>
               <h1 style={{color:"white"}}>Control De Gastos</h1>
             <p className='text-card-work'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis obcaecati qui corporis aliquid recusandae laudantium ipsum, sunt officiis cumque, temporibus nesciunt. Hic, doloremque odio omnis similique nemo sed a repellat?</p>
             <div className="conteiner-links-works">
@@ -53,12 +53,12 @@ export default function RowAndColumnSpacing() {
             
           </Item>
         </Grid>
-        <Grid sx={{padding:"1rem 5rem"}}  xs={12}>
+        <Grid sx={{padding:{md:"1rem 5rem", sx:"0rem"}}}  xs={12}>
         <Item className='iten-work'>
             <div>
               <img style={{padding:"5px"}} src={cotizadorDeMonedas} alt="" width="100%" height="100%"/>
             </div>
-            <div style={{padding:"10px"}}>
+            <div>
               <h1 style={{color:"white"}}>Cotizador De Monedas</h1>
             <p className='text-card-work'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis obcaecati qui corporis aliquid recusandae laudantium ipsum, sunt officiis cumque, temporibus nesciunt. Hic, doloremque odio omnis similique nemo sed a repellat?</p>
              <div className="conteiner-links-works">
