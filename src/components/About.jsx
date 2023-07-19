@@ -6,14 +6,9 @@ import "../styles/About.css"
 export default function About() {
   return (
    <> 
-   <div style={{ display: "flex", marginTop: "7%", justifyContent:"center"}}>
+   <div className="container-img-text-about">
       <div
-        style={{
-          width: "30%",
-          display: "flex",
-          justifyContent: "center",
-          alignItems:"center",
-        }}
+      className="conteiner-img-about"
       >
         <img
         style={{borderRadius:"200px", padding:"10px 0px 10px 0px"}}
@@ -23,8 +18,7 @@ export default function About() {
           height="250"
         />
       </div>
-      <div style={{ width: "40%", display:"flex", alignItems:"center", color:"white", fontSize: "15px",
-    letterSpacing: "2px",}}>
+      <div className="conteiner-text-about">
         <p>
           Having graduated from a bootcamp of +800 hours, I feel that I have the
           basic knowledge to work on a real project. I plan to continue learning

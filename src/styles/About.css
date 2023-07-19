@@ -1,5 +1,46 @@
-.icon-about{
-    width: 70px;
-    height: 70px;
-    margin: 4%;
+.container-img-text-about {
+  width: 100%;
+  margin-top: 7rem;
+}
+@media (min-width: 700px) {
+  .container-img-text-about {
+    display: flex;
+    margin-top: 7%;
+    justify-content: center;
+  }
+}
+.conteiner-img-about {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+@media (min-width: 700px) {
+  .conteiner-img-about {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.conteiner-text-about {
+    width: 100%;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+@media (min-width: 700px) {
+  .conteiner-text-about {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 15px;
+    letter-spacing: 2px;
+  }
+}
+
+.icon-about {
+  width: 70px;
+  height: 70px;
+  margin: 4%;
 }
