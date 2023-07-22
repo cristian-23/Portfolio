@@ -94,7 +94,7 @@ export default function Contact({ setIsLoading }) {
         </Typography>
         <div style={{ padding: "5%  " }}>
           <CssTextField
-            sx={{ width: "100%" }}
+            sx={{ width: "100%", color:"white" }}
             name="user_name_and_lastname"
             label="Name and Last name"
             id="custom-css-outlined-input"
@@ -104,7 +104,7 @@ export default function Contact({ setIsLoading }) {
             Please enter your name and last name.
           </FormHelperText>
           <CssTextField
-            sx={{ width: "100%", marginTop: "10px" }}
+            sx={{ width: "100%", marginTop: "10px", color:"white" }}
             type="email"
             name="user_email"
             label="Email"
