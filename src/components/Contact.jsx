@@ -14,6 +14,7 @@ import {
 import { ToastContainer, toast } from "react-toastify";
 import emailjs from "@emailjs/browser";
 import "../styles/Contact.css";
+import { BsWhatsapp } from "react-icons/bs";
 
 export default function Contact({ setIsLoading }) {
   const CssTextField = styled(TextField)({
@@ -76,7 +77,7 @@ export default function Contact({ setIsLoading }) {
         sx={{
           margin: "0 auto",
           marginTop: "15px",
-          width: {md:"40%", sx:"100%"},
+          width: { md: "40%", sx: "100%" },
         }}
         noValidate
         autoComplete="off"
@@ -94,7 +95,7 @@ export default function Contact({ setIsLoading }) {
         </Typography>
         <div style={{ padding: "5%  " }}>
           <CssTextField
-            sx={{ width: "100%", color:"white" }}
+            sx={{ width: "100%", color: "white" }}
             name="user_name_and_lastname"
             label="Name and Last name"
             id="custom-css-outlined-input"
@@ -104,7 +105,7 @@ export default function Contact({ setIsLoading }) {
             Please enter your name and last name.
           </FormHelperText>
           <CssTextField
-            sx={{ width: "100%", marginTop: "10px", color:"white" }}
+            sx={{ width: "100%", marginTop: "10px", color: "white" }}
             type="email"
             name="user_email"
             label="Email"
@@ -146,6 +147,18 @@ export default function Contact({ setIsLoading }) {
           Submit
         </button>
       </Box>
+      <a
+        style={{
+          position: "absolute",
+          zIndex: 100,
+          right: 100,
+          color: "#25D366",
+        }}
+        href="https://api.whatsapp.com/send?phone=62091221"
+      >
+        <BsWhatsapp style={{width:"40px",
+          height:"40px"}}/>
+      </a>
       <footer
         style={{
           backgroundColor: "#0b0b0b",
@@ -156,16 +169,12 @@ export default function Contact({ setIsLoading }) {
           display: "flex",
         }}
       >
-        <div
-        className="text-footer"
-        >
+        <div className="text-footer">
           <p style={{ color: "white", fontSize: "15px" }}>
             Get connected with me on social networks:
           </p>
         </div>
-        <div
-        className="buttons-container"
-        >
+        <div className="buttons-container">
           <a
             className="button-contact"
             href="https://www.facebook.com/profile.php?id=100010168543402"
