@@ -147,18 +147,6 @@ export default function Contact({ setIsLoading }) {
           Submit
         </button>
       </Box>
-      <a
-        style={{
-          position: "absolute",
-          zIndex: 100,
-          right: 100,
-          color: "#25D366",
-        }}
-        href="https://api.whatsapp.com/send?phone=62091221"
-      >
-        <BsWhatsapp style={{width:"40px",
-          height:"40px"}}/>
-      </a>
       <footer
         style={{
           backgroundColor: "#0b0b0b",
@@ -209,6 +197,13 @@ export default function Contact({ setIsLoading }) {
             target="_blank"
           >
             <FaTwitter className="icons-contact" />
+          </a>
+          <a
+            className="button-contact"
+            href="https://api.whatsapp.com/send?phone=59162091221"
+            target="_blank"
+          >
+            <BsWhatsapp className="icons-contact" />
           </a>
         </div>
       </footer>
