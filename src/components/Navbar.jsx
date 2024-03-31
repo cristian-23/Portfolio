@@ -48,25 +48,54 @@ export default function BackToTop(props) {
   return (
     <React.Fragment>
       <CssBaseline />
-      <AppBar sx={{ backgroundColor: "#0b0b0b", height:{xs:"18%",md:"15%"}}}>
-        <Toolbar className="toolbar" sx={{ display: "flex", height: "100%", width: "100%"}}>
-          <Typography sx={{width:{xs:"100%", md:"50%"}}} component="div" >
+      <AppBar
+        sx={{ backgroundColor: "#1B1E1E", height: { xs: "18%", md: "15%" } }}
+      >
+        <Toolbar
+          className="toolbar"
+          sx={{ display: "flex", height: "100%", width: "100%" }}
+        >
+          <Typography sx={{ width: { xs: "100%", md: "50%" } }} component="div">
             <Typography
-              sx={{ fontWeight: "600", fontSize: "20px", letterSpacing:"2px",textAlign:"center", WebkitTextStroke:"1.2px", mt:{xs:"1rem"}}}
+              sx={{
+                fontWeight: "600",
+                fontSize: "20px",
+                letterSpacing: "2px",
+                textAlign: "center",
+                WebkitTextStroke: "1.2px",
+                mt: { xs: "1rem" },
+                fontFamily: "Poppins",
+              }}
               variant="p"
               component="div"
             >
-               CRISTIAN BLANCO     
+              CRISTIAN BLANCO
             </Typography>
-            <Typography sx={{textAlign:"center", fontSize:"13px"}} variant="p" component="div">
+            <Typography
+              sx={{
+                textAlign: "center",
+                fontSize: "13px",
+                fontFamily: "Poppins",
+              }}
+              variant="p"
+              component="div"
+            >
               FULL STACK DEVELOPER
             </Typography>
           </Typography>
           <div className="conteiner-tabs">
-            <a  className="tabs" href="/">HOME</a>
-            <a className="tabs" href="/about">ABOUT</a>
-            <a className="tabs" href="/work">WORK</a>
-            <a className="tabs" href="/contact">CONTACT</a>
+            <a className="tabs" href="/">
+              Home
+            </a>
+            <a className="tabs" href="/about">
+              About
+            </a>
+            <a className="tabs" href="/work">
+              Work
+            </a>
+            <a className="tabs" href="/contact">
+              Contact
+            </a>
           </div>
         </Toolbar>
       </AppBar>
