@@ -1,59 +1,73 @@
-.conteiner-card-work{
-   width: 85%;
+.conteiner-card-work {
+  width: 85%;
 }
-@media(max-width:700px){
-   .conteiner-card-work{
-      width: 100% !important;
-      margin-top: 5rem !important;
-   }
-   .css-1tbev19-MuiGrid2-root {
-      padding: 0 !important;
-   }
+@media (max-width: 700px) {
+  .conteiner-card-work {
+    width: 100% !important;
+    margin-top: 5rem !important;
+  }
+  .css-1tbev19-MuiGrid2-root {
+    padding: 0 !important;
+  }
 }
-.iten-work{
-   background-color: black !important;
+.iten-work {
+  background-color: black !important;
 }
-@media(min-width:700px){
-   .iten-work{
-      display:flex;
-      background-color: black !important;
-   }
+@media (min-width: 700px) {
+  .iten-work {
+    display: flex;
+    background-color: black !important;
+  }
 }
-.conteiner-links-works{
-   display: flex;
-   justify-content: center;
+.conteiner-links-works {
+  display: flex;
+  justify-content: center;
 }
-.text-card-work{
-   padding: 0px 20px;
-   color: white;
+.text-card-work {
+  padding: 0px 20px;
+  color: white;
+  font-family: "Poppins";
 }
-@media(max-width:700px){
-   .text-card-work{
-      padding: 0px ;
-   }
+@media (max-width: 700px) {
+  .text-card-work {
+    padding: 0px;
+  }
 }
-.enlace-work{
-   text-decoration: none;
-   color: white;
-   padding: .3rem 2rem;
-   background-color: blue;
-   font-weight: 900;
-   margin-right: 20px;
+.enlace-work {
+  text-decoration: none;
+  color: white;
+  padding: 0.8rem 3.5rem;
+  background-color: blue;
+  border-radius: 8px;
+  font-weight: 900;
+  margin-right: 20px;
 }
-@media(max-width:700px){
-   .enlace-work{
-      padding: .4rem 3rem;
-   }
+.enlace-work:hover {
+  transform: perspective(1px) scale3d(1.044, 1.044, 1) translateZ(0) !important;
 }
-.enlace-github-work{
-   background-color: green;
-   text-decoration: none;
-   color: white;
-   padding: .3rem 1rem;
-   font-weight: 900;
+
+@media (max-width: 700px) {
+  .enlace-work {
+    padding: 0.4rem 3rem;
+  }
 }
-@media(max-width:700px){
-   .enlace-github-work{
-      padding: .4rem 2rem;
-   }
+.enlace-github-work {
+  background-color: green;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8;
+  color: white;
+  border-radius: 8px;
+  padding: 0.8rem 2.5rem;
+  font-family: "Poppins";
+  font-weight: 600;
+}
+.enlace-github-work:hover {
+  transform: perspective(1px) scale3d(1.044, 1.044, 1) translateZ(0) !important;
+}
+@media (max-width: 700px) {
+  .enlace-github-work {
+    padding: 0.4rem 2rem;
+  }
 }

@@ -8,52 +8,54 @@
   height: 2%;
   margin-left: 1%;
 }
-.conteiner-tabs{
+.conteiner-tabs {
   display: flex;
   flex-direction: row;
   justify-content: center;
   gap: 1.5rem;
   margin-top: 1.5rem;
 }
-@media(min-width:768px){
-  .conteiner-tabs{
+@media (min-width: 768px) {
+  .conteiner-tabs {
     flex-direction: row;
     gap: 4rem;
   }
 }
-.tabs{
-    display: inline-block;
-    position: relative;
-    color: white;
-    font-size: 12px;
-    cursor: pointer;
-    transition: 0.4s all ease;
-    text-decoration: none;
+.tabs {
+  display: inline-block;
+  position: relative;
+  color: white;
+  font-size: 16px;
+  font-family: "Poppins";
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.4s all ease;
+  text-decoration: none;
 }
 
-.tabs:hover{
-    color: #cdcdcd;
-    transition: 0.4s all ease;
-    transform: scale(1.2);
+.tabs:hover {
+  color: #cdcdcd;
+  transition: 0.4s all ease;
+  transform: scale(1.2);
 }
-.tabs::after{
-    content: "";
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 2px;
-    bottom: -5px;
-    left: 0;
-    background-color: white;
-    transform-origin: bottom right;
-    transition: transform 0.5s ease-out;
+.tabs::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: white;
+  transform-origin: bottom right;
+  transition: transform 0.5s ease-out;
 }
-.tabs:hover::after{
-    transform: scaleX(1);
-    transform-origin: bottom left;
+.tabs:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
-@media (max-width:700px){
-  .toolbar{
+@media (max-width: 700px) {
+  .toolbar {
     display: initial !important;
   }
 }

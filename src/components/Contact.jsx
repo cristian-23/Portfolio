@@ -75,81 +75,77 @@ export default function Contact({ setIsLoading }) {
         component="form"
         className="container-contact"
         sx={{
-          margin: "0 auto",
-          marginTop: "15px",
+          position: "absolute",
+          left: 0,
+          top: 0,
+          right: 0,
+          bottom: 0,
+          display: "flex",
+          alignItems: "center",
           width: { md: "40%", sx: "100%" },
         }}
         noValidate
         autoComplete="off"
       >
-        <Typography
-          variant="h6"
-          component="div"
-          sx={{
-            padding: "4% 0% 0% 5%",
-            fontWeight: "bolder",
-            WebkitTextStroke: "1px",
-          }}
-        >
-          CONTACT ME BY EMAIL:
-        </Typography>
-        <div style={{ padding: "5%  " }}>
-          <CssTextField
-            sx={{ width: "100%", color: "white" }}
-            name="user_name_and_lastname"
-            label="Name and Last name"
-            id="custom-css-outlined-input"
-            focused
-          />
-          <FormHelperText id="component-helper-text" sx={{ color: "white" }}>
-            Please enter your name and last name.
-          </FormHelperText>
-          <CssTextField
-            sx={{ width: "100%", marginTop: "10px", color: "white" }}
-            type="email"
-            name="user_email"
-            label="Email"
-            id="custom-css-outlined-input"
-            focused
-          />
-          <FormHelperText id="component-helper-text" sx={{ color: "white" }}>
-            Please enter your email.
-          </FormHelperText>
+        <div style={{ width: "100%" }}>
+          <div style={{ padding: "5%  " }}>
+            <CssTextField
+              sx={{ width: "100%", color: "white" }}
+              name="user_name_and_lastname"
+              label="Name and Last name"
+              id="custom-css-outlined-input"
+              focused
+            />
+            <FormHelperText id="component-helper-text" sx={{ color: "white" }}>
+              Please enter your name and last name.
+            </FormHelperText>
+            <CssTextField
+              sx={{ width: "100%", marginTop: "10px", color: "white" }}
+              type="email"
+              name="user_email"
+              label="Email"
+              id="custom-css-outlined-input"
+              focused
+            />
+            <FormHelperText id="component-helper-text" sx={{ color: "white" }}>
+              Please enter your email.
+            </FormHelperText>
+          </div>
+          <div style={{ padding: "0% 5% 0% 5%" }}>
+            <CssTextField
+              sx={{ width: "100%", fontFamily: "Poppins" }}
+              type="text"
+              name="user_text"
+              label="Text"
+              id="custom-css-outlined-input"
+              rows={4}
+              multiline
+              focused
+            />
+            <FormHelperText id="component-helper-text" sx={{ color: "white" }}>
+              Please enter the query you have.
+            </FormHelperText>
+          </div>
+          <button
+            type="submit"
+            style={{
+              color: "white",
+              borderRadius: "5px",
+              backgroundColor: "transparent",
+              border: "2px solid white",
+              margin: "10px 0px 0px 28px",
+              width: "80px",
+              height: "30px",
+              cursor: "pointer",
+            }}
+          >
+            Submit
+          </button>
         </div>
-        <div style={{ padding: "0% 5% 0% 5%" }}>
-          <CssTextField
-            sx={{ width: "100%" }}
-            type="text"
-            name="user_text"
-            label="Text"
-            id="custom-css-outlined-input"
-            rows={4}
-            multiline
-            focused
-          />
-          <FormHelperText id="component-helper-text" sx={{ color: "white" }}>
-            Please enter the query you have.
-          </FormHelperText>
-        </div>
-        <button
-          type="submit"
-          style={{
-            color: "white",
-            borderRadius: "5px",
-            backgroundColor: "transparent",
-            border: "2px solid white",
-            margin: "10px 0px 0px 28px",
-            width: "80px",
-            height: "30px",
-            cursor: "pointer",
-          }}
-        >
-          Submit
-        </button>
       </Box>
       <footer
         style={{
-          backgroundColor: "#0b0b0b",
+          backgroundColor: "#1B1E1E",
           position: "fixed",
           bottom: "0",
           width: "100%",
@@ -158,7 +154,9 @@ export default function Contact({ setIsLoading }) {
         }}
       >
         <div className="text-footer">
-          <p style={{ color: "white", fontSize: "15px" }}>
+          <p
+            style={{ color: "white", fontSize: "15px", fontFamily: "Poppins" }}
+          >
             Get connected with me on social networks:
           </p>
         </div>
