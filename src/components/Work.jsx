@@ -33,7 +33,13 @@ export default function RowAndColumnSpacing() {
         container
         columnSpacing={{ xs: 12, md: 4 }}
       >
-        <Grid sx={{ padding: { md: "1rem 5rem", sx: "0rem" } }} xs={12}>
+        <Grid
+          sx={{
+            padding: { md: "1rem 5rem", sx: "0rem" },
+            marginBottom: "4rem",
+          }}
+          xs={12}
+        >
           <Item className="iten-work">
             <div>
               <img
@@ -74,7 +80,13 @@ export default function RowAndColumnSpacing() {
             </div>
           </Item>
         </Grid>
-        <Grid sx={{ padding: { md: "1rem 5rem", sx: "0rem" } }} xs={12}>
+        <Grid
+          sx={{
+            padding: { md: "1rem 5rem", sx: "0rem" },
+            marginBottom: "4rem",
+          }}
+          xs={12}
+        >
           <Item className="iten-work">
             <div>
               <img
@@ -115,7 +127,13 @@ export default function RowAndColumnSpacing() {
             </div>
           </Item>
         </Grid>
-        <Grid sx={{ padding: { md: "1rem 5rem", sx: "0rem" } }} xs={12}>
+        <Grid
+          sx={{
+            padding: { md: "1rem 5rem", sx: "0rem" },
+            marginBottom: "4rem",
+          }}
+          xs={12}
+        >
           <Item className="iten-work">
             <div>
               <img
