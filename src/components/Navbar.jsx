@@ -49,7 +49,7 @@ export default function BackToTop(props) {
     <React.Fragment>
       <CssBaseline />
       <AppBar
-        sx={{ backgroundColor: "#1B1E1E", height: { xs: "18%", md: "15%" } }}
+        sx={{ backgroundColor: "#000800", height: { xs: "18%", md: "15%" } }}
       >
         <Toolbar
           className="toolbar"

@@ -145,7 +145,7 @@ export default function Contact({ setIsLoading }) {
       </Box>
       <footer
         style={{
-          backgroundColor: "#1B1E1E",
+          backgroundColor: "#000800",
           position: "fixed",
           bottom: "0",
           width: "100%",
