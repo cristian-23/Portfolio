@@ -1,0 +1,755 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background: #0f0f1a;
+        color: #e2e8f0;
+        font-family: "Poppins", sans-serif;
+        font-size: 13.5px;
+        letter-spacing: 0.02em;
+        width: 210mm;
+        margin: 0 auto;
+      }
+
+      /* ── HEADER ── */
+      .header {
+        background: linear-gradient(
+          135deg,
+          #1a1a2e 0%,
+          #16213e 50%,
+          #0f3460 100%
+        );
+        border-bottom: 2px solid #2a2a4a;
+        padding: 12px 20px 10px 20px;
+        position: relative;
+        overflow: hidden;
+      }
+      .header::before {
+        content: "//";
+        position: absolute;
+        left: 18px;
+        top: 16px;
+        font-size: 36px;
+        font-weight: bold;
+        color: rgba(99, 102, 241, 0.25);
+        font-family: "Poppins", sans-serif;
+        line-height: 1;
+      }
+      .container-name-subtitle {
+        display: flex;
+        flex-direction: column;
+        padding-left: 36px;
+      }
+      .header-name {
+        font-size: 28px;
+        font-weight: bold;
+        color: #f1f5f9;
+        letter-spacing: 0.05em;
+        /* margin-bottom: 4px; */
+      }
+      .header-subtitle {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        margin-bottom: 8px;
+      }
+      .dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #f97316;
+        flex-shrink: 0;
+      }
+      .header-role {
+        color: #60a5fa;
+        font-size: 12px;
+      }
+      .header-exp {
+        color: #94a3b8;
+        font-size: 12px;
+      }
+      .header-contact {
+        display: flex;
+        gap: 16px;
+        padding: 6px 8px;
+        background: rgba(255, 255, 255, 0.04);
+        border-radius: 4px;
+        flex-wrap: wrap;
+      }
+      .contact-item {
+        color: #94a3b8;
+        font-size: 9px;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+      }
+      .contact-icon {
+        color: #6366f1;
+        font-size: 9px;
+      }
+
+      /* ── BODY ── */
+      .body {
+        display: flex;
+        gap: 0;
+        padding: 12px 0 12px 0;
+        background: #0f0f1a;
+        min-height: 248mm;
+      }
+
+      /* LEFT COLUMN */
+      .left {
+        flex: 1;
+        padding: 0 12px 0 16px;
+        border-right: 1px solid #1e1e3a;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      /* RIGHT COLUMN */
+      .right {
+        width: 200px;
+        padding: 0 14px 0 10px;
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      /* ── SECTIONS ── */
+      .section {
+        margin-bottom: 0;
+      }
+      .section-label {
+        font-size: 11px;
+        font-weight: bold;
+        color: #60a5fa;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        border-bottom: 1px solid #1e1e3a;
+        padding-bottom: 4px;
+        margin-bottom: 9px;
+      }
+
+      /* PERFIL */
+      .perfil-text {
+        font-size: 12px;
+        color: #cbd5e1;
+        line-height: 1.8;
+      }
+
+      /* EXPERIENCIA */
+      .exp-header {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 4px;
+      }
+      .exp-badge {
+        background: #1e3a5f;
+        color: #60a5fa;
+        font-size: 9px;
+        font-weight: bold;
+        padding: 4px 7px;
+        border-radius: 3px;
+        letter-spacing: 0.05em;
+      }
+      .exp-title {
+        font-size: 16px;
+        font-weight: bold;
+        color: #f1f5f9;
+        flex: 1;
+      }
+      .exp-date {
+        font-size: 10px;
+        color: #64748b;
+        border: 1px solid #2a2a4a;
+        padding: 4px 8px;
+        border-radius: 3px;
+        white-space: nowrap;
+      }
+      .exp-company {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        background: #161628;
+        border-left: 3px solid #6366f1;
+        padding: 8px 12px;
+        margin-bottom: 6px;
+        border-radius: 0 3px 3px 0;
+      }
+      .exp-company-icon {
+        color: #6366f1;
+        font-size: 11px;
+      }
+      .exp-company-text {
+        font-size: 10px;
+        font-weight: bold;
+        color: #a5b4fc;
+        letter-spacing: 0.05em;
+      }
+      .bullet-list {
+        list-style: none;
+        padding: 0;
+      }
+      .bullet-list li {
+        font-size: 12px;
+        color: #cbd5e1;
+        line-height: 1.8;
+        padding-left: 16px;
+        position: relative;
+        margin-bottom: 7px;
+      }
+      .bullet-list li::before {
+        content: "›";
+        position: absolute;
+        left: 0;
+        color: #6366f1;
+        font-size: 13px;
+        line-height: 1.1;
+        font-family: "Poppins", sans-serif;
+      }
+
+      /* RIGHT: SKILLS */
+      .skills-group {
+        margin-bottom: 16px;
+      }
+      .skills-label {
+        font-size: 9px;
+        color: #64748b;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        margin-bottom: 4px;
+      }
+      .skills-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px;
+      }
+      .tag {
+        background: #161628;
+        border: 1px solid #2a2a4a;
+        border-radius: 3px;
+        padding: 5px 9px;
+        font-size: 11px;
+        font-weight: bold;
+        color: #e2e8f0;
+      }
+      .tag.ts {
+        color: #60a5fa;
+        border-color: #1e3a5f;
+      }
+      .tag.js {
+        color: #fbbf24;
+        border-color: #3d2e00;
+      }
+      .tag.py {
+        color: #34d399;
+        border-color: #0d2e20;
+      }
+      .tag.php {
+        color: #c084fc;
+        border-color: #2e1a40;
+      }
+      .tag.react {
+        color: #38bdf8;
+        border-color: #0c2a3d;
+      }
+      .tag.next {
+        color: #f1f5f9;
+        border-color: #2a2a4a;
+      }
+      .tag.rn {
+        color: #60a5fa;
+        border-color: #1e3a5f;
+      }
+      .tag.angular {
+        color: #f87171;
+        border-color: #3d1010;
+      }
+      .tag.node {
+        color: #4ade80;
+        border-color: #0d2e10;
+      }
+      .tag.express {
+        color: #94a3b8;
+        border-color: #2a2a4a;
+      }
+      .tag.laravel {
+        color: #f87171;
+        border-color: #3d1010;
+      }
+      .tag.pg {
+        color: #38bdf8;
+        border-color: #0c2a3d;
+      }
+      .tag.git {
+        color: #fb923c;
+        border-color: #3d1a00;
+      }
+      .tag.vercel {
+        color: #f1f5f9;
+        border-color: #2a2a4a;
+      }
+      .tag.cloud {
+        color: #a78bfa;
+        border-color: #2a1e40;
+      }
+      .tag.figma {
+        color: #f472b6;
+        border-color: #3d0e26;
+      }
+      .tag.jira {
+        color: #60a5fa;
+        border-color: #1e3a5f;
+      }
+
+      /* FORMACIÓN */
+      .form-item {
+        margin-bottom: 12px;
+      }
+      .form-title-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 4px;
+      }
+      .form-title {
+        font-size: 11px;
+        font-weight: bold;
+        color: #f1f5f9;
+        flex: 1;
+      }
+      .form-date {
+        font-size: 9px;
+        color: #64748b;
+        border: 1px solid #2a2a4a;
+        padding: 1px 6px;
+        border-radius: 3px;
+        white-space: nowrap;
+        flex-shrink: 0;
+      }
+      .form-sub {
+        font-size: 10px;
+        color: #64748b;
+        margin-top: 1px;
+      }
+
+      /* IDIOMAS */
+      .lang-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 9px;
+      }
+      .lang-name {
+        font-size: 11px;
+        color: #cbd5e1;
+      }
+      .lang-badge {
+        font-size: 9px;
+        font-weight: bold;
+        border: 1px solid #2a2a4a;
+        padding: 1px 5px;
+        border-radius: 3px;
+        color: #94a3b8;
+      }
+
+      /* PAGE 2 HEADER */
+      .page2-header {
+        display: flex;
+        align-items: baseline;
+        gap: 14px;
+        background: #111122;
+        border-bottom: 1px solid #1e1e3a;
+        padding: 8px 16px;
+      }
+      .page2-name {
+        font-size: 15px;
+        font-weight: bold;
+        color: #f1f5f9;
+      }
+      .page2-cont {
+        font-size: 10px;
+        color: #60a5fa;
+      }
+
+      /* METODOLOGÍAS */
+      .metod-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 4px;
+      }
+      .metod-tag {
+        border: 1px solid #2a2a4a;
+        border-radius: 4px;
+        padding: 5px 10px;
+        font-size: 10px;
+        font-weight: bold;
+      }
+      .mt1 {
+        color: #60a5fa;
+        border-color: #1e3a5f;
+      }
+      .mt2 {
+        color: #f1f5f9;
+        border-color: #2a2a4a;
+      }
+      .mt3 {
+        color: #f97316;
+        border-color: #3d1e00;
+      }
+      .mt4 {
+        color: #f1f5f9;
+        border-color: #2a2a4a;
+      }
+      .mt5 {
+        color: #60a5fa;
+        border-color: #1e3a5f;
+      }
+      .mt6 {
+        color: #f472b6;
+        border-color: #3d0e26;
+      }
+      .mt7 {
+        color: #fb923c;
+        border-color: #3d1a00;
+      }
+      .mt8 {
+        color: #f1f5f9;
+        border-color: #2a2a4a;
+      }
+
+      /* REFERENCIAS */
+      .refs-grid {
+        display: flex;
+        gap: 12px;
+      }
+      .ref-card {
+        flex: 1;
+        background: #111122;
+        border: 1px solid #1e1e3a;
+        border-radius: 6px;
+        padding: 12px 14px;
+      }
+      .ref-top {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 8px;
+      }
+      .ref-avatar {
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #1e3a5f, #2563eb);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 11px;
+        font-weight: bold;
+        color: #60a5fa;
+        flex-shrink: 0;
+      }
+      .ref-name {
+        font-size: 11px;
+        font-weight: bold;
+        color: #f1f5f9;
+      }
+      .ref-role {
+        font-size: 9px;
+        color: #60a5fa;
+        margin-top: 1px;
+      }
+      .ref-contact {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        margin-top: 4px;
+      }
+      .ref-contact-icon {
+        color: #6366f1;
+        font-size: 9px;
+      }
+      .ref-contact-text {
+        font-size: 9px;
+        color: #94a3b8;
+      }
+
+      /* PAGE BREAK */
+      .page {
+        page-break-after: always;
+      }
+      .page:last-child {
+        page-break-after: auto;
+      }
+
+      @page {
+        size: A4;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- PAGE 1 -->
+    <div class="page">
+      <!-- HEADER -->
+      <div class="header">
+        <div class="container-name-subtitle">
+          <div class="header-name">Jonn Cristian Blanco Leandro</div>
+          <div class="header-subtitle">
+            <span class="dot"></span>
+            <span class="header-role">Full Stack Developer</span>
+            <span style="color: #2a2a4a">·</span>
+            <span class="header-exp">2.5 años de experiencia</span>
+          </div>
+        </div>
+        <div class="header-contact">
+          <span class="contact-item"
+            ><span class="contact-icon">✉</span>
+            cristianblancoleandro@gmail.com</span
+          >
+          <span class="contact-item"
+            ><span class="contact-icon">📞</span> +591 62091221</span
+          >
+          <span class="contact-item"
+            ><span class="contact-icon">🌐</span>
+            cristian-blanco.netlify.app</span
+          >
+          <span class="contact-item"
+            ><span class="contact-icon">🐙</span> github.com/Cristian-23</span
+          >
+          <span class="contact-item"
+            ><span class="contact-icon">📍</span> Santa Cruz, Bolivia</span
+          >
+        </div>
+      </div>
+
+      <!-- BODY -->
+      <div class="body">
+        <!-- LEFT -->
+        <div class="left">
+          <!-- PERFIL -->
+          <div class="section">
+            <div class="section-label">Perfil Profesional</div>
+            <p class="perfil-text">
+              Soy Desarrollador Full Stack con 2.5 años de experiencia en empresas
+              y startups, especializado en el desarrollo de sistemas
+              administrativos, aplicaciones móviles y control de accesos. Me
+              apasiona aportar valor real a los equipos y siempre estoy abierto
+              a crecer y seguir aprendiendo.
+            </p>
+          </div>
+
+          <!-- EXPERIENCIA -->
+          <div class="section">
+            <div class="section-label">Experiencia Laboral</div>
+            <div class="exp-header">
+              <span class="exp-badge">FOS</span>
+              <span class="exp-title">Desarrollador Frontend</span>
+              <span class="exp-date">Sep 2023 – Feb 2026</span>
+            </div>
+            <div class="exp-company">
+              <span class="exp-company-icon">■</span>
+              <span class="exp-company-text"
+                >Condaty — App de gestión de condominios y control de
+                accesos</span
+              >
+            </div>
+            <ul class="bullet-list">
+              <li>
+                Desarrollé aplicaciones web con Next.js y móviles con React
+                Native para la plataforma.
+              </li>
+              <li>
+                Implementé módulos de encuestas, publicaciones, roles/permisos y
+                sincronización de contactos.
+              </li>
+              <li>
+                Construí el sistema de control de accesos con QR e integré
+                Cloudinary para gestión de medios.
+              </li>
+              <li>
+                Desarrollé el módulo de áreas sociales y optimicé el
+                rendimiento, reduciendo los tiempos de carga.
+              </li>
+              <li>
+                Trabajé con metodología Scrum usando Git, GitHub, Jira y Figma
+                en equipo.
+              </li>
+              <li>
+                Aprendí a manejar aplicaciones nativas en 1 mes y participé en
+                su creación desde cero para guardias y residentes.
+              </li>
+              <li>
+                La aplicación de administración era web, pero participé en su
+                creación desde cero usando Next.js y CSS Modules, anteriormente
+                con Tailwind y React.
+              </li>
+            </ul>
+          </div>
+
+          <!-- METODOLOGÍAS (moved to page 1 left col) -->
+          <div class="section">
+            <div class="section-label">Metodologías y Prácticas</div>
+            <div class="metod-tags">
+              <span class="metod-tag mt1">APIs REST</span>
+              <span class="metod-tag mt2">Clean Code</span>
+              <span class="metod-tag mt3">Scrum</span>
+              <span class="metod-tag mt4">GitHub Projects</span>
+              <span class="metod-tag mt5">Jira</span>
+              <span class="metod-tag mt6">Figma</span>
+              <span class="metod-tag mt7">Git Flow</span>
+              <span class="metod-tag mt8">Code Review</span>
+            </div>
+          </div>
+
+          <!-- REFERENCIAS (moved to page 1 left col) -->
+          <div class="section">
+            <div class="section-label">Referencias Laborales</div>
+            <div class="refs-grid">
+              <div class="ref-card">
+                <div class="ref-top">
+                  <div class="ref-avatar">EH</div>
+                  <div>
+                    <div class="ref-name">Esteban Hurtado</div>
+                    <div class="ref-role">Líder Técnico @ Fos</div>
+                  </div>
+                </div>
+                <div class="ref-contact">
+                  <span class="ref-contact-icon">✉</span
+                  ><span class="ref-contact-text"
+                    >blumbergesteban@gmail.com</span
+                  >
+                </div>
+                <div class="ref-contact">
+                  <span class="ref-contact-icon">📞</span
+                  ><span class="ref-contact-text">+591 73628134</span>
+                </div>
+              </div>
+              <div class="ref-card">
+                <div class="ref-top">
+                  <div class="ref-avatar">MG</div>
+                  <div>
+                    <div class="ref-name">Mario Guzmán</div>
+                    <div class="ref-role">CTO @ Fos</div>
+                  </div>
+                </div>
+                <div class="ref-contact">
+                  <span class="ref-contact-icon">✉</span
+                  ><span class="ref-contact-text">—</span>
+                </div>
+                <div class="ref-contact">
+                  <span class="ref-contact-icon">📞</span
+                  ><span class="ref-contact-text">+591 72170900</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /left -->
+
+        <!-- RIGHT -->
+        <div class="right">
+          <!-- HABILIDADES -->
+          <div class="section">
+            <div class="section-label">Habilidades Técnicas</div>
+
+            <div class="skills-group">
+              <div class="skills-label">Lenguajes</div>
+              <div class="skills-tags">
+                <span class="tag ts">TypeScript</span>
+                <span class="tag js">JavaScript</span>
+                <span class="tag py">Python</span>
+                <span class="tag php">PHP</span>
+              </div>
+            </div>
+
+            <div class="skills-group">
+              <div class="skills-label">Frontend</div>
+              <div class="skills-tags">
+                <span class="tag react">React</span>
+                <span class="tag next">Next.js</span>
+                <span class="tag rn">React Native</span>
+                <span class="tag angular">Angular</span>
+              </div>
+            </div>
+
+            <div class="skills-group">
+              <div class="skills-label">Backend &amp; DB</div>
+              <div class="skills-tags">
+                <span class="tag node">Node.js</span>
+                <span class="tag express">Express</span>
+                <span class="tag laravel">Laravel</span>
+                <span class="tag pg">PostgreSQL</span>
+              </div>
+            </div>
+
+            <div class="skills-group">
+              <div class="skills-label">Herramientas</div>
+              <div class="skills-tags">
+                <span class="tag git">Git</span>
+                <span class="tag vercel">Vercel</span>
+                <span class="tag cloud">Cloudinary</span>
+                <span class="tag figma">Figma</span>
+                <span class="tag jira">Jira</span>
+                <span class="tag">Xcode</span>
+                <span class="tag">Android Studio</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- FORMACIÓN -->
+          <div class="section">
+            <div class="section-label">Formación</div>
+            <div class="form-item">
+              <div class="form-title-row">
+                <span class="form-title">Bootcamp Full Stack</span>
+                <span class="form-date">2022 – 2023</span>
+              </div>
+              <div class="form-sub">Plataforma 5</div>
+            </div>
+            <div class="form-item">
+              <div class="form-title-row">
+                <span class="form-title">Cursos especializados</span>
+                <span class="form-date">Continuo</span>
+              </div>
+              <div class="form-sub">DevTalles · Udemy</div>
+            </div>
+          </div>
+
+          <!-- IDIOMAS -->
+          <div class="section">
+            <div class="section-label">Idiomas</div>
+            <div class="lang-item">
+              <span class="lang-name">Español</span>
+              <span class="lang-badge">Nativo</span>
+            </div>
+            <div class="lang-item">
+              <span class="lang-name">Inglés</span>
+              <span class="lang-badge">Básico</span>
+            </div>
+          </div>
+        </div>
+        <!-- /right -->
+      </div>
+      <!-- /body -->
+    </div>
+    <!-- /page -->
+  </body>
+</html>
